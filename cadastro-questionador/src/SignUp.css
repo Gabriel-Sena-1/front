@@ -50,7 +50,6 @@ body {
     border-radius: 4px;          /* Cantos arredondados */
     cursor: pointer;             /* Estilo do cursor ao passar o mouse */
     font-size: 14px;
-    fo            
     transition: background-color 0.2s; /* Transição de cor de fundo ao passar o mouse */
 }
 
