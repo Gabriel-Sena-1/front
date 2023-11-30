@@ -9,6 +9,6 @@ export function createUser (data: createUserDTO) {
 
 export async function allUser (data: createUserDTO) {
     const response = await fetch('http://localhost:4000/api/user/', { method: 'GET'})
-    const user = await response.json()
+    const users = await response.json()
     return users
 }
