@@ -1,14 +1,18 @@
 import React from 'react';
 import './SignUp.css';
 import ufmsLogo from './ufms logo.png'; // Importação da imagem
-import { allUser, createUser } from './services/user.service';
+// import { allUser, createUser } from './services/user.service';
 
 const listOfUsers = () => {
-    allUser().map((user) => {
-        return (
-            <li>Nome: {user.name}</li>
-        )
-    })
+    // allUser().map((user) => {
+    //     return (
+    //         <li>Nome: {user.name}</li>
+    //     )
+    // })
+}
+
+const createUser = () => {
+    console.log('create user')
 }
 
 const SignUp = () => {
