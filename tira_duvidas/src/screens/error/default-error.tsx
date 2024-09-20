@@ -68,7 +68,7 @@ export function DefaultErrorElement() {
               <Avatar
                 border='1px'
                 borderColor='whiteAlpha.900'
-                name={user?.firstName + ' ' + user?.lastName}
+                name={' '}
                 icon={<User size={24} />}
                 onClick={() => navigate('/settings/perfil')}
                 cursor='pointer'

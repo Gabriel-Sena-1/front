@@ -1,19 +1,17 @@
-import React from 'react';
+import React from "react";
 import {
   ActionFunction,
   LazyRouteFunction,
   LoaderFunction,
   RouteObject,
   ShouldRevalidateFunction,
-  createBrowserRouter
-} from 'react-router-dom';
-import {
-  ChartLine
-} from '@phosphor-icons/react';
+  createBrowserRouter,
+} from "react-router-dom";
+import { ChartLine } from "@phosphor-icons/react";
 
-import { SignUp } from '../screens/login/signup';
-import { RootUnauthenticatedLayout } from '../layouts/root-unauthenticated-layout';
-import { DefaultErrorElement } from '../screens/error/default-error';
+import { SignUp } from "../screens/login/signup";
+import { RootUnauthenticatedLayout } from "../layouts/root-unauthenticated-layout";
+import { DefaultErrorElement } from "../screens/error/default-error";
 
 export declare type Params<Key extends string = string> = {
   readonly [key in Key]: string | undefined;
@@ -49,29 +47,29 @@ export interface CustomRouteProps {
   Component?: React.ComponentType | null;
   errorElement?: React.ReactNode | null;
   ErrorBoundary?: React.ComponentType | null;
-  handle?: RouteObject['handle'];
+  handle?: RouteObject["handle"];
   shouldRevalidate?: ShouldRevalidateFunction;
   lazy?: LazyRouteFunction<RouteObject>;
 }
 
 export const unauthenticatedRoutes = [
   {
-    type: 'internal',
-    name: 'singup',
+    type: "internal",
+    name: "singup",
     index: true,
-    icon: <ChartLine weight='bold' size={20} />,
+    icon: <ChartLine weight="bold" size={20} />,
     element: <SignUp />,
     hidden: true,
-  }
+  },
 ];
 
 const unauthenticatedRoutesWithLayout = [
   {
-    path: '/',
+    path: "/",
     element: <RootUnauthenticatedLayout />,
     children: unauthenticatedRoutes,
     errorElement: <DefaultErrorElement />,
-  }
+  },
 ];
 
 export const unauthenticatedRouter = createBrowserRouter(
