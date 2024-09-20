@@ -6,6 +6,7 @@ import {
   Button,
   Card,
   CardBody,
+  CardFooter,
   FormControl,
   FormLabel,
   Input,
@@ -40,8 +41,12 @@ export function SignUp() {
                 required
               />
             </CardBody>
+            <CardFooter className="w-full">
+              <Button type="button" className="m-auto">
+                FAZER CADASTRO
+              </Button>
+            </CardFooter>
           </Card>
-          <Button type="button">FAZER CADASTRO</Button>
           <div className="logo mx-auto">
             <img src={ufmsLogo} alt="UFMS Logo" />{" "}
             {/* Uso da imagem importada */}
