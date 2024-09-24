@@ -12,6 +12,9 @@ import { ChartLine } from "@phosphor-icons/react";
 import { SignUp } from "../screens/login/signup";
 import { RootUnauthenticatedLayout } from "../layouts/root-unauthenticated-layout";
 import { DefaultErrorElement } from "../screens/error/default-error";
+import FAQSection from "../screens/FAQ/FAQSection";
+
+
 
 export declare type Params<Key extends string = string> = {
   readonly [key in Key]: string | undefined;
@@ -55,11 +58,19 @@ export interface CustomRouteProps {
 export const unauthenticatedRoutes = [
   {
     type: "internal",
-    name: "singup",
+    name: "signup",
     index: true,
     icon: <ChartLine weight="bold" size={20} />,
     element: <SignUp />,
     hidden: true,
+  },
+  {
+    type: "internal",
+    name: "faq",
+    path: "/faq",
+    icon: <ChartLine weight="bold" size={20} />,
+    element: <FAQSection />,
+    hidden: false, // Se quiser que apareça no menu ou navegação
   },
 ];
 
