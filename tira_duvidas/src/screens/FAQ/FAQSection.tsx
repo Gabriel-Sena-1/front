@@ -3,6 +3,7 @@ import styles from "./FAQSection.module.css";
 import FAQItem from "./FAQItem";
 import "./FAQSection.module.css";
 import { Flex } from "@chakra-ui/layout";
+import { allUser } from "../../services/user.service";
 
 const categories = [
   "Categoria1",
@@ -11,6 +12,8 @@ const categories = [
   "Categoria4",
   "Categoria5",
 ];
+
+const users = await allUser();
 
 const faqItems = [
   {
